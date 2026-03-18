@@ -1,0 +1,88 @@
+//
+//  LoaderListView.swift
+//  Private-Loader
+//
+//  Created by Yash Chouhan on 17/03/26.
+//
+
+import SwiftUI
+
+struct LoaderItem: Identifiable {
+    let id = UUID()
+    let name: String
+    let subtitle: String
+    let icon: String
+}
+
+struct LoaderListView: View {
+
+    private let loaders: [LoaderItem] = [
+        LoaderItem(name: "Orb Loader",          subtitle: "Multi-ring orb with orbiting dot", icon: "circle.circle.fill"),
+        LoaderItem(name: "Neon Spiral Loader",  subtitle: "Dual arc neon glow spinner",       icon: "arrow.2.circlepath"),
+        LoaderItem(name: "Dot Ring Loader",     subtitle: "Glowing dot arc spinner",          icon: "circle.grid.cross.fill"),
+        LoaderItem(name: "Simple Arc Loader",   subtitle: "Classic arc spinner with label",   icon: "arrow.clockwise"),
+        LoaderItem(name: "Block Bounce Loader",  subtitle: "Staggered bouncing block wave",    icon: "square.grid.2x2.fill"),
+        LoaderItem(name: "Segment Ring Loader",  subtitle: "3-D segmented blue donut spinner", icon: "circle.dotted"),
+    ]
+
+    var body: some View {
+        NavigationStack {
+            List(loaders) { item in
+                NavigationLink(destination: destination(for: item)) {
+                    HStack(spacing: 16) {
+                        Image(systemName: item.icon)
+                            .font(.title2)
+                            .foregroundStyle(.tint)
+                            .frame(width: 36)
+
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text(item.name)
+                                .font(.headline)
+                            Text(item.subtitle)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .padding(.vertical, 6)
+                }
+            }
+            .navigationTitle("Loaders")
+        }
+    }
+
+    @ViewBuilder
+    private func destination(for item: LoaderItem) -> some View {
+        switch item.name {
+        case "Orb Loader":
+            OrbLoader()
+                .navigationTitle("Orb Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Neon Spiral Loader":
+            NeonSpiralLoader()
+                .navigationTitle("Neon Spiral Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Dot Ring Loader":
+            DotRingLoader()
+                .navigationTitle("Dot Ring Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Simple Arc Loader":
+            SimpleArcLoader()
+                .navigationTitle("Simple Arc Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Block Bounce Loader":
+            BlockBounceLoader()
+                .navigationTitle("Block Bounce Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Segment Ring Loader":
+            SegmentRingLoader()
+                .navigationTitle("Segment Ring Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        default:
+            EmptyView()
+        }
+    }
+}
+
+#Preview {
+    LoaderListView()
+}
