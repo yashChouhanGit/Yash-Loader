@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-// In Progress
+//MARK: In Progress
 struct SimpleArcLoader: View {
     @State private var rotation: Double = 0
 
