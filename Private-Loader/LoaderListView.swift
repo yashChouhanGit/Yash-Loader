@@ -24,6 +24,7 @@ struct LoaderListView: View {
         LoaderItem(name: "Block Bounce Loader",  subtitle: "Staggered bouncing block wave",    icon: "square.grid.2x2.fill"),
         LoaderItem(name: "Segment Ring Loader",  subtitle: "3-D segmented blue donut spinner", icon: "circle.dotted"),
         LoaderItem(name: "Bar Scan Loader",      subtitle: "Sweeping wave across teal segment bar", icon: "chart.bar.fill"),
+        LoaderItem(name: "Circle Tick Loader",   subtitle: "Glowing tick ring with arc & percent",  icon: "circle.dotted.circle"),
     ]
 
     var body: some View {
@@ -81,6 +82,10 @@ struct LoaderListView: View {
         case "Bar Scan Loader":
             BarScanLoader()
                 .navigationTitle("Bar Scan Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Circle Tick Loader":
+            CircleTickLoader()
+                .navigationTitle("Circle Tick Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
