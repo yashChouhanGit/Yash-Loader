@@ -26,6 +26,7 @@ struct LoaderListView: View {
         LoaderItem(name: "Bar Scan Loader",      subtitle: "Sweeping wave across teal segment bar", icon: "chart.bar.fill"),
         LoaderItem(name: "Circle Tick Loader",   subtitle: "Glowing tick ring with arc & percent",  icon: "circle.dotted.circle"),
         LoaderItem(name: "Smoke Ring Loader",    subtitle: "Organic plasma smoke ring on black",     icon: "smoke.fill"),
+        LoaderItem(name: "Cross Pulse Loader",   subtitle: "4 cyan dots pulse outward in sequence",  icon: "plus.circle.fill"),
     ]
 
     var body: some View {
@@ -91,6 +92,10 @@ struct LoaderListView: View {
         case "Smoke Ring Loader":
             SmokeRingLoader()
                 .navigationTitle("Smoke Ring Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Cross Pulse Loader":
+            CrossPulseLoader()
+                .navigationTitle("Cross Pulse Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
