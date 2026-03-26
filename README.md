@@ -1,6 +1,10 @@
 
 Example Vidoes 
 
+##SmokeRingLoader
+
+![Simulator Screen Recording - iPhone 17 Pro - 2026-03-26 at 22 45 31](https://github.com/user-attachments/assets/3e576d04-a5fa-4a41-8515-c42f31283d67)
+
 #Loader
 
 https://github.com/user-attachments/assets/c0209365-45d9-48af-91ee-7d87edcdb918
