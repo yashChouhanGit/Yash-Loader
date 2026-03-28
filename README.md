@@ -4,6 +4,10 @@
 
 #Example Videos
 
+#NeonInfinityLoader
+
+https://github.com/user-attachments/assets/8f66d823-9080-4173-b9c1-cf474d828c64
+
 ##SmokeRingLoader
 
 ![Simulator Screen Recording - iPhone 17 Pro - 2026-03-26 at 22 45 31](https://github.com/user-attachments/assets/3e576d04-a5fa-4a41-8515-c42f31283d67)
