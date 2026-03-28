@@ -29,6 +29,7 @@ struct LoaderListView: View {
         LoaderItem(name: "Cross Pulse Loader",   subtitle: "4 cyan dots pulse outward in sequence",  icon: "plus.circle.fill"),
         LoaderItem(name: "Neon Counter Loader",  subtitle: "Red & blue neon rings with centre count", icon: "circle.hexagonpath.fill"),
         LoaderItem(name: "Neon Infinity Loader", subtitle: "Glowing neon head traces an infinity path", icon: "infinity"),
+        LoaderItem(name: "Pulse Grid Loader",    subtitle: "Blue dot grid with radial outward wave",   icon: "circle.grid.3x3.fill"),
     ]
 
     var body: some View {
@@ -106,6 +107,10 @@ struct LoaderListView: View {
         case "Neon Infinity Loader":
             NeonInfinityLoader()
                 .navigationTitle("Neon Infinity Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Pulse Grid Loader":
+            PulseGridLoader()
+                .navigationTitle("Pulse Grid Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
