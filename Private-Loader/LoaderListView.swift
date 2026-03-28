@@ -27,6 +27,8 @@ struct LoaderListView: View {
         LoaderItem(name: "Circle Tick Loader",   subtitle: "Glowing tick ring with arc & percent",  icon: "circle.dotted.circle"),
         LoaderItem(name: "Smoke Ring Loader",    subtitle: "Organic plasma smoke ring on black",     icon: "smoke.fill"),
         LoaderItem(name: "Cross Pulse Loader",   subtitle: "4 cyan dots pulse outward in sequence",  icon: "plus.circle.fill"),
+        LoaderItem(name: "Neon Counter Loader",  subtitle: "Red & blue neon rings with centre count", icon: "circle.hexagonpath.fill"),
+        LoaderItem(name: "Neon Infinity Loader", subtitle: "Glowing neon head traces an infinity path", icon: "infinity"),
     ]
 
     var body: some View {
@@ -96,6 +98,14 @@ struct LoaderListView: View {
         case "Cross Pulse Loader":
             CrossPulseLoader()
                 .navigationTitle("Cross Pulse Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Neon Counter Loader":
+            NeonCounterLoader()
+                .navigationTitle("Neon Counter Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Neon Infinity Loader":
+            NeonInfinityLoader()
+                .navigationTitle("Neon Infinity Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
