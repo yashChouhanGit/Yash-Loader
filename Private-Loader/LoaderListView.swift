@@ -31,6 +31,8 @@ struct LoaderListView: View {
         LoaderItem(name: "Neon Infinity Loader", subtitle: "Glowing neon head traces an infinity path", icon: "infinity"),
         LoaderItem(name: "Pulse Grid Loader",       subtitle: "Blue dot grid with radial outward wave",    icon: "circle.grid.3x3.fill"),
         LoaderItem(name: "Color Pulse Grid Loader", subtitle: "Rainbow colour-wheel grid with radial wave", icon: "circle.grid.3x3"),
+        LoaderItem(name: "Slack Hash Loader",       subtitle: "Slack-style 4-colour hashtag spinner",       icon: "number"),
+        LoaderItem(name: "Burger Loader",           subtitle: "EatStreet-style bouncing burger icon",        icon: "fork.knife"),
     ]
 
     var body: some View {
@@ -116,6 +118,14 @@ struct LoaderListView: View {
         case "Color Pulse Grid Loader":
             ColorPulseGridLoader()
                 .navigationTitle("Color Pulse Grid Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Slack Hash Loader":
+            SlackHashLoader()
+                .navigationTitle("Slack Hash Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Burger Loader":
+            BurgerLoader()
+                .navigationTitle("Burger Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
