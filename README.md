@@ -4,6 +4,10 @@
 
 #Example Videos
 
+#ClassicSpinnerLoader
+
+https://github.com/user-attachments/assets/639363e5-d018-4cb2-9685-aae6509bf9ae
+
 #PulseGridLoader
 
 https://github.com/user-attachments/assets/df9b9479-d35e-467b-8b1c-f2e3a638f0b5
