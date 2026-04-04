@@ -33,6 +33,7 @@ struct LoaderListView: View {
         LoaderItem(name: "Color Pulse Grid Loader", subtitle: "Rainbow colour-wheel grid with radial wave", icon: "circle.grid.3x3"),
         LoaderItem(name: "Slack Hash Loader",       subtitle: "Slack-style 4-colour hashtag spinner",       icon: "number"),
         LoaderItem(name: "Burger Loader",           subtitle: "EatStreet-style bouncing burger icon",        icon: "fork.knife"),
+        LoaderItem(name: "Classic Spinner Loader",  subtitle: "8-dot chasing circle with fade trail",        icon: "circle.dotted"),
     ]
 
     var body: some View {
@@ -126,6 +127,10 @@ struct LoaderListView: View {
         case "Burger Loader":
             BurgerLoader()
                 .navigationTitle("Burger Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Classic Spinner Loader":
+            ClassicSpinnerLoader()
+                .navigationTitle("Classic Spinner Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
