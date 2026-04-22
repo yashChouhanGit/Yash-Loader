@@ -4,6 +4,10 @@
 
 #Example Videos
 
+#LiquidBowlLoader.swift
+
+https://github.com/user-attachments/assets/f1bcccf3-f525-4c73-b645-f46523b15062
+
 #ClassicSpinnerLoader
 
 https://github.com/user-attachments/assets/639363e5-d018-4cb2-9685-aae6509bf9ae
