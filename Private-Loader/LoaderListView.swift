@@ -35,6 +35,7 @@ struct LoaderListView: View {
         LoaderItem(name: "Burger Loader",           subtitle: "EatStreet-style bouncing burger icon",        icon: "fork.knife"),
         LoaderItem(name: "Classic Spinner Loader",  subtitle: "8-dot chasing circle with fade trail",        icon: "circle.dotted"),
         LoaderItem(name: "Liquid Bowl Loader",      subtitle: "Semicircle bowl with animated liquid fill",   icon: "drop.fill"),
+        LoaderItem(name: "Gear Mesh Loader",        subtitle: "Interlocking silver & orange gear train",      icon: "gearshape.fill"),
     ]
 
     var body: some View {
@@ -136,6 +137,10 @@ struct LoaderListView: View {
         case "Liquid Bowl Loader":
             LiquidBowlLoader()
                 .navigationTitle("Liquid Bowl Loader")
+                .navigationBarTitleDisplayMode(.inline)
+        case "Gear Mesh Loader":
+            GearMeshLoader()
+                .navigationTitle("Gear Mesh Loader")
                 .navigationBarTitleDisplayMode(.inline)
         default:
             EmptyView()
